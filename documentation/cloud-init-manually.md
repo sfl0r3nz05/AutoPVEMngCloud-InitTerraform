@@ -10,4 +10,18 @@
     wget https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img
     ```
 
-2. Install packages
+2. Install packages:
+
+    - Install the tools:
+
+        ```console
+        sudo apt update -y && sudo apt install libguestfs-tools -y
+        ```
+
+    - Install qemu-guest-agent
+
+        ```console
+        sudo virt-customize -a focal-server-cloudimg-amd64.img --install qemu-guest-agent
+        ```
+
+3. sdfsdf
