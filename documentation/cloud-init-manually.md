@@ -1,5 +1,9 @@
 # Manually configure a Proxmox Ubuntu cloud-init image
 
+## Where to act?
+
+   ![pve](./images/pve.PNG)
+
 1. [Explore, select and download the preferred distro images from Cloud-init.](https://cloud-images.ubuntu.com/). E.g.:
 
     ```console
