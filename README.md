@@ -2,7 +2,7 @@
 
 ## Architecture
 
-    ![](./documentation/images/terraform.PNG)
+   ![terraform](./documentation/images/terraform.PNG)
 
 ## How to deploy
 
