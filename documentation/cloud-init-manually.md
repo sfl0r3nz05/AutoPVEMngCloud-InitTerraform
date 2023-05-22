@@ -6,13 +6,13 @@
    |--------------------------|--------------------------|
    | Environment 1            | Environment 2            |
 
-1. **Environment 1**: [Explore, select and download the preferred distro images from Cloud-init.](https://cloud-images.ubuntu.com/). E.g.:
+1. [Explore, select and download the preferred distro images from Cloud-init.](https://cloud-images.ubuntu.com/) (**Environment 1**). E.g.:
 
     ```console
     wget https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img
     ```
 
-2. **Environment 1**: Install packages:
+2. Install packages (**Environment 1**):
 
     - Install the tools:
 
@@ -26,13 +26,19 @@
         sudo virt-customize -a focal-server-cloudimg-amd64.img --install qemu-guest-agent
         ```
 
-3. **Environment 2**: Generate a key file:
+3. Generate a key file (**Environment 2**):
 
     ```console
     ssh-keygen -f ./key-file -t ecdsa -b 521
     ```
 
-4. **Environment 1**: Create a user and the necessary folders:
+    - Send `key-file.pub` from `Terraform controller` to `PVE`:
+
+        ```console
+        scp key-file.pub root@10.63.27.51:/root
+        ```
+
+4. Create a user and the necessary folders (**Environment 1**):
 
     ```console
     virt-customize -a focal-server-cloudimg-amd64.img --run-command 'useradd terraform'
@@ -42,7 +48,7 @@
     virt-customize -a focal-server-cloudimg-amd64.img --run-command 'mkdir -p /home/terraform/.ssh'
     ```
 
-5. **Environment 1**: Inject the SSH keys into the cloud image itself before turning it into a template:
+5. Inject the SSH keys into the cloud image itself before turning it into a template (**Environment 1**):
 
     ```console
     virt-customize -a focal-server-cloudimg-amd64.img --ssh-inject terraform:file:/root/key-file.pub
@@ -52,7 +58,7 @@
     virt-customize -a focal-server-cloudimg-amd64.img --run-command 'chown -R terraform:terraform /home/terraform'
     ```
 
-6. **Environment 1**: Create a Proxmox virtual machine using the newly modified image
+6. Create a Proxmox virtual machine using the newly modified image (**Environment 1**):
 
     ```console
     qm create 9000 --name "ubuntu-2004-cloudinit-template" --memory 2048 --cores 2 --net0 virtio,bridge=vmbr0
@@ -64,26 +70,26 @@
     qm set 9000 --agent enabled=1
     ```
 
-7. **Environment 1**: Convert VM to a template
+7. Convert VM to a template (**Environment 1**):
 
     ```console
     qm template 9000
     ```
 
-8. **Environment 1**: Clone the template into a full VM and set some parameters
+8. Clone the template into a full VM and set some parameters (**Environment 1**):
 
     ```console
     qm clone 9000 999 --name test-clone-cloud-init
     ```
 
-9. **Environment 1**: Set SSH keys and IP address
+9. Set SSH keys and IP address (**Environment 1**):
 
     ```console
     qm set 999 --sshkey key-file.pub
     qm set 999 --ipconfig0 ip=10.63.27.56/24,gw=10.63.27.1
     ```
 
-10. **Environment 1**: Start up the VM
+10. Start up the VM (**Environment 1**):
 
     ```console
     qm start 999
