@@ -2,7 +2,7 @@
 
 ## Where to act?
 
-   | ![pve](./images/pve.PNG) | ![pve](./images/pve.PNG) |
+   | ![pve](./images/pve-to-terraform.PNG) | ![pve](./images/terraform-to-pve.PNG) |
    |--------------------------|--------------------------|
    | Environment 1            | Environment 2            |
 
