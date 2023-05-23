@@ -1,4 +1,4 @@
-# Manually configure a Proxmox Ubuntu cloud-init image
+# Manually create an Ubuntu cloud-init template for Proxmox
 
 ## Where to act?
 
@@ -26,9 +26,10 @@
         sudo virt-customize -a focal-server-cloudimg-amd64.img --install qemu-guest-agent
         ```
 
-3. Generate a key file (**Environment 2**):
+3. Create a `keys` folder and generate a key file (**Environment 2**):
 
     ```console
+    mkdir keys/ && cd keys/
     ssh-keygen -f ./key-file -t ecdsa -b 521
     ```
 

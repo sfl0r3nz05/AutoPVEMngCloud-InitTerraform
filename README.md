@@ -6,4 +6,5 @@
 
 ## How to deploy
 
-1. [Manually configure a Proxmox Ubuntu cloud-init image](./documentation/cloud-init-manually.md)
+1. [Manually create an Ubuntu cloud-init template for Proxmox](./documentation/cloud-init-manually.md)
+2. [Deploy VMs in Proxmox with Terraform](./documentation/dep-proxmox-vm-terraform.md)
