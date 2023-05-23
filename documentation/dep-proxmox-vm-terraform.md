@@ -235,4 +235,6 @@
         Apply complete! Resources: 0 added, 0 changed, 1 destroyed.
         ```
 
-        ![destroy](./images/destroyed.png)
+| ![destroy](./images/destroyed.png) |
+        |--------------------------|
+        | VM destroyed            |
