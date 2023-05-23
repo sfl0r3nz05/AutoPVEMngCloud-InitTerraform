@@ -85,15 +85,29 @@
     qm clone 9000 999 --name test-clone-cloud-init
     ```
 
-9. Set SSH keys and IP address (**Environment 1**):
+## How to test
+
+1. Set SSH keys and IP address (**Environment 1**):
 
     ```console
     qm set 999 --sshkey key-file.pub
     qm set 999 --ipconfig0 ip=10.63.27.56/24,gw=10.63.27.1
     ```
 
-10. Start up the VM (**Environment 1**):
+2. Start up the VM (**Environment 1**):
 
     ```console
     qm start 999
     ```
+
+    ![vm-started](./images/vm-started.png)
+
+3. Test ssh access:
+
+    ```console
+    ssh -i key-file terraform@10.63.27.56
+    ```
+
+    - Expected output:
+
+        ![vm-started](./images/logged.PNG)
