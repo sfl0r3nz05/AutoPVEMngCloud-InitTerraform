@@ -30,19 +30,19 @@
 
         |![user1](./images/user1.png)|
         |----------------------------|
-        |User|
+        |Create User|
 
     - Associate the user to Linux PAM standard:
 
         |![user2](./images/user2.png)|
         |----------------------------|
-        |User|
+        |Define User|
 
     - Add user permission:
 
         |![user4](./images/user4.png)|
         |----------------------------|
-        |User|
+        |Add Role|
 
     - Associate roles as `PVEVMAdmin` and `Administrator` for specific Path:
 
@@ -51,7 +51,7 @@
 
         |![user3](./images/user3.png)|
         |----------------------------|
-        |User|
+        |Define roles|
 
 3. Terraform basic information and provider installation
 
