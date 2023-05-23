@@ -200,8 +200,7 @@
         Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
         ```
 
-        |--------------------------|--------------------------|        | Environment 1            | Environment 2            |
-        | ![create-transition](./images/creation-transition.png) |  |
+        | ![create-transition](./images/creation-transition.png) | ![created](./images/creation.png) |
         |--------------------------|--------------------------|
         | VM creation            | VM created            |
 
