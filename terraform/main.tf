@@ -69,4 +69,3 @@ resource "proxmox_vm_qemu" "test_server" {
   ${var.ssh_key}
   EOF
 }
-
