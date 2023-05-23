@@ -200,6 +200,8 @@
         Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
         ```
 
+        ![](./images/creation.png)
+
     > count = 0
 
     ```console
