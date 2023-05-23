@@ -77,7 +77,9 @@
     qm template 9000
     ```
 
-    ![image](./images/cloud-init.png)
+    |![image](./images/cloud-init.png)|
+    |---------------------------------|
+    | Template creation               |
 
 8. Clone the template into a full VM and set some parameters (**Environment 1**):
 
@@ -100,7 +102,9 @@
     qm start 999
     ```
 
-    ![vm-started](./images/vm-started.png)
+    |![vm-started](./images/vm-started.png)|
+    |---------------------------------|
+    | Template as VM                  |
 
 3. Test ssh access:
 
@@ -110,4 +114,6 @@
 
     - Expected output:
 
-        ![vm-started](./images/logged.PNG)
+        |![vm-started](./images/logged.PNG)|
+        |----------------------------------|
+        | SSH login over VM                |
