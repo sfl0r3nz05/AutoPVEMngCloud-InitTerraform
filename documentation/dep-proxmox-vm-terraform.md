@@ -28,22 +28,22 @@
 
     - Create a user:
 
-        ![user1](./images/user1)
+        ![user1](./images/user1.png)
 
     - Associate the user to Linux PAM standard:
 
-        ![user2](./images/user2)
+        ![user2](./images/user2.png)
 
     - Add user permission:
 
-        ![user4](./images/user4)
+        ![user4](./images/user4.png)
 
     - Associate roles as `PVEVMAdmin` and `Administrator` for specific Path:
 
       - Permissions -> Add -> Path = `/`, User: `terraform`, role = ‘PVEVMAdmin’.
       - Permissions -> Add -> Path = `/storage/local-lvm`, User: `terraform`, role = Administrator.
 
-        ![user3](./images/user3)
+        ![user3](./images/user3.png)
 
 3. Terraform basic information and provider installation
 
