@@ -77,6 +77,8 @@
     qm template 9000
     ```
 
+    ![image](./images/cloud-init.png)
+
 8. Clone the template into a full VM and set some parameters (**Environment 1**):
 
     ```console

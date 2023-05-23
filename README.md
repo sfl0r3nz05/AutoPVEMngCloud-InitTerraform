@@ -14,3 +14,4 @@
 ## To Do
 
 1. Use terraform API to manage proxmox VMs.
+2. Update terraform to link with ansible playbooks.
