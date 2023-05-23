@@ -10,3 +10,7 @@
 2. [Deploy VMs in Proxmox with Terraform](./documentation/dep-proxmox-vm-terraform.md)
 
    > A deployment example is included on `/terraform` project folder.
+
+## To Do
+
+1. Use terraform API to manage proxmox VMs.
