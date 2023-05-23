@@ -1,5 +1,11 @@
 # Deploy VMs in Proxmox with Terraform
 
+## Where to act?
+
+   | ![pve](./images/terraform-to-pve.PNG) |
+   |---------------------------------------|
+   | Act in terraform controller |
+
 1. Install Terraform
 
     ```console
@@ -19,6 +25,25 @@
     ```
 
 2. Determine Authentication Method (use API keys)
+
+    - Create a user:
+
+        ![user1](./images/user1)
+
+    - Associate the user to Linux PAM standard:
+
+        ![user2](./images/user2)
+
+    - Add user permission:
+
+        ![user4](./images/user4)
+
+    - Associate roles as `PVEVMAdmin` and `Administrator` for specific Path:
+
+      - Permissions -> Add -> Path = `/`, User: `terraform`, role = ‘PVEVMAdmin’.
+      - Permissions -> Add -> Path = `/storage/local-lvm`, User: `terraform`, role = Administrator.
+
+        ![user3](./images/user3)
 
 3. Terraform basic information and provider installation
 
@@ -146,7 +171,7 @@
     }
     ```
 
-9. Run the plan
+9.  Run the plan
 
     ```console
     terraform plan
