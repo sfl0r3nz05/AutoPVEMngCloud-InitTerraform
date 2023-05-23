@@ -200,7 +200,10 @@
         Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
         ```
 
-        ![](./images/creation.png)
+        |--------------------------|--------------------------|        | Environment 1            | Environment 2            |
+        | ![create-transition](./images/creation-transition.png) |  |
+        |--------------------------|--------------------------|
+        | VM creation            | VM created            |
 
     > count = 0
 
@@ -232,3 +235,5 @@
 
         Apply complete! Resources: 0 added, 0 changed, 1 destroyed.
         ```
+
+        ![destroy](./images/destroyed.png)
